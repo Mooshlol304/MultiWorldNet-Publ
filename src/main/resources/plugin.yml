@@ -1,0 +1,33 @@
+name: MultiWorldNet
+version: '1.0-SNAPSHOT'
+main: xyz.vp.moosh.multiWorldNet.MultiWorldNet
+api-version: '1.21'
+
+commands:
+  worldnetwarp:
+    description: Warp to a specific world
+    usage: /worldnetwarp <world>
+  worldnetrestart:
+    description: Restart a world
+    usage: /worldnetrestart <world>
+  worldnetutilise:
+    description: Show world memory and CPU usage
+    usage: /worldnetutilise <world>
+  worldnetcreate:
+    description: Create a new world
+    usage: /worldnetcreate <world> [overworld/nether/end]
+  worldnetcheck:
+    description: Check which world you or another player is in
+    usage: /worldnetcheck [player]
+  worldnetmaintenance:
+    description: Put a world into maintenance mode
+    usage: /worldnetmaintenance <world> <minutes> <on/off> [reason]
+    permission: multiworldnet.maintenance
+
+permissions:
+  multiworldnet.maintenance:
+    description: Allows managing maintenance mode for worlds
+    default: op
+  multiworldnet.maintenance.bypass:
+    description: Allows bypassing maintenance restrictions
+    default: op
